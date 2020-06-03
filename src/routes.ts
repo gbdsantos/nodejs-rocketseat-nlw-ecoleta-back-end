@@ -3,6 +3,11 @@ import express from 'express';
 import PointsController from './controllers/PointsController';
 import ItemsController from './controllers/ItemsController';
 
+/**
+ * ANOTATION
+ * 🇺🇸 Max methods per controller: index, show, create, update, delete
+ * */
+
 const routes = express.Router();
 
 routes.get('/', (request, response) => {
