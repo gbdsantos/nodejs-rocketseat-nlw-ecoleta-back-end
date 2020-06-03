@@ -1,11 +1,12 @@
-import express = require("express");
+import express = require('express');
+import routes from './routes';
 
 const app = express();
+const port = 3333;
 
-app.get("/users", (request, response) => {
-  console.log("Listagem de usuaŕios");
+app.use(express.json());
+app.use(routes);
 
-  response.json(["Guilherme", "Andre", "João"]);
+app.listen(port, () => {
+  console.log(`🚀 Server has started! On Port ${port}`);
 });
-
-app.listen(3333);
